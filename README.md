@@ -7,7 +7,7 @@ A small, reproducible data product for evaluating three fictional workforce-rete
 From the repository root on Windows, these commands create an isolated Python environment, install the tested dependencies, prepare the complete project without requiring internet access, and open the interactive dashboard:
 
 ```cmd
-py -3.11 -m venv .venv
+python -m venv .venv
 .venv\Scripts\python.exe -m pip install pip==25.0.1
 .venv\Scripts\python.exe -m pip install -r requirements.lock
 .venv\Scripts\python.exe -m pip install -e . --no-deps
@@ -17,7 +17,7 @@ py -3.11 -m venv .venv
 
 The offline demonstration verifies and processes the preserved public-source responses in `tests/fixtures/replay` through the same source adapters used by the online workflow. It keeps their original retrieval timestamps and does not present them as newly downloaded data.
 
-The dashboard lets a reviewer explore all three workforce objectives, country and business-unit results, economic relationships, data-quality evidence, source attribution, and known limitations. If `py -3.11` is unavailable but Python 3.11 or newer is already installed, use `python -m venv .venv` for the first command.
+The dashboard lets a reviewer explore all three workforce objectives, country and business-unit results, economic relationships, data-quality evidence, source attribution, and known limitations. The `python` command must refer to Python 3.11 or newer; confirm it with `python --version` if needed.
 
 To inspect the completed results without running Python, start with [`evidence/README.md`](evidence/README.md), which links to the reviewed analytical extracts, quality reports, source attribution, and seven dashboard screenshots.
 

@@ -21,7 +21,7 @@ Each stage records the state and risks that existed at that point in development
 - Streamlit was approved as the local interactive experience, while Power BI remains the production consumption mapping.
 - Initial data-quality counts were reproduced by the implemented pipeline and automated tests.
 - The initial 2021-only economic window was corrected to include 2020 unemployment and vacancy support history after candidate challenge.
-- Current submission tasks, separate from the analytical implementation, are completing a fresh-clone rehearsal and publishing the Git repository for reviewer access.
+- The repository was published for reviewer access. A candidate-run fresh-clone rehearsal exposed Windows line-ending conversion in checksum-protected replay fixtures; the repository now fixes their checkout format, and the remaining submission task is to push and repeat that clean-clone check.
 
 ## Stage 1: assessment inspection and requirements refinement
 
@@ -714,3 +714,17 @@ The candidate approved a small reviewer-facing evidence package rather than comm
 - The complete association evidence contains exactly nine calculated comparisons.
 - The copied reports match their generated source files byte-for-byte.
 - All seven screenshot copies match the candidate-supplied files byte-for-byte and have readable 1,366-pixel widths.
+
+## Fresh-clone Windows portability correction
+
+### Candidate direction and contribution
+
+After publishing the repository, the candidate performed the planned clean-clone rehearsal on Windows. The candidate reported that the offline workflow rejected the unemployment replay fixture because its checksum no longer matched, then approved a repository-level portability correction and a simpler quick-start environment command.
+
+### Agent contribution and verification
+
+- Compared the original and cloned fixture bytes and identified that Git's Windows `core.autocrlf=true` setting had changed the final LF byte to CRLF during checkout.
+- Added a narrow `.gitattributes` rule that keeps all checksum-protected replay JSON files at LF on every operating system without changing their content or weakening checksum validation.
+- Simplified the first quick-start command from a Windows-launcher-specific Python 3.11 invocation to `python -m venv .venv`; the documented prerequisite remains Python 3.11 or newer.
+- Re-ran the complete offline workflow successfully through all ten stages, including replay validation and DuckDB rebuilding.
+- Re-ran the complete automated suite: 77 tests passed.
