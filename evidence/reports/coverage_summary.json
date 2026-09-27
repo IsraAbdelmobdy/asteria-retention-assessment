@@ -1,0 +1,11 @@
+{
+  "annual_output": "data\\output\\combined_annual_inflation_context.csv",
+  "annual_rows": 436,
+  "annual_small_sample_warnings": 126,
+  "first_complete_trailing_external_period": "2021-Q1",
+  "incomplete_trailing_external_country_quarters": 0,
+  "inflation_missing_rows": 0,
+  "quarterly_output": "data\\output\\combined_quarterly_context.csv",
+  "quarterly_rows": 1523,
+  "quarterly_small_sample_warnings": 774
+}

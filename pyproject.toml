@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "asteria-retention"
+version = "0.1.0"
+description = "External economic signals and workforce-retention assessment"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "duckdb>=1.0",
+  "httpx>=0.27",
+  "pandas>=2.2",
+]
+
+[project.optional-dependencies]
+dashboard = [
+  "streamlit>=1.40",
+]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+asteria-retention = "asteria_retention.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/asteria_retention"]
+
+[tool.pytest.ini_options]
+addopts = "-q -p no:cacheprovider"
+pythonpath = ["src"]
+testpaths = ["tests"]

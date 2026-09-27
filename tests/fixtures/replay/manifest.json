@@ -1,0 +1,30 @@
+{
+  "purpose": "Network-independent replay of the approved public external sources",
+  "captured_vintage": "2026-09-25",
+  "storage_normalization": "remove_one_trailing_lf_before_checksum_and_replay",
+  "fixtures": {
+    "unemployment": {
+      "file": "unemployment.json",
+      "provider": "Eurostat",
+      "request_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/une_rt_m?lang=en&freq=M&unit=PC_ACT&s_adj=SA&age=TOTAL&sex=T&geo=BG&geo=EL&geo=IE&geo=IT&geo=PL&geo=RO&sinceTimePeriod=2020-01&untilTimePeriod=2025-12",
+      "retrieved_at_utc": "2026-09-25T18:54:02Z",
+      "sha256": "9e855f1b87e5cbde183494de7d3348c62709734ef10a5498e94fcc1ae1d84bb9"
+    },
+    "job_vacancy": {
+      "file": "job_vacancy.json",
+      "provider": "Eurostat",
+      "request_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/jvs_q_nace2?lang=en&freq=Q&s_adj=SA&nace_r2=B-S&sizeclas=TOTAL&indic_em=JVR&geo=BG&geo=EL&geo=IE&geo=IT&geo=PL&geo=RO&sinceTimePeriod=2020-Q1&untilTimePeriod=2025-Q4",
+      "retrieved_at_utc": "2026-09-25T18:54:05Z",
+      "sha256": "63089767b9d36b80e4a2ee148d89735834189ce51434d515b0168d775e8eb665"
+    },
+    "inflation": {
+      "file": "inflation.json",
+      "provider": "World Bank",
+      "request_url": "https://api.worldbank.org/v2/country/BGR;GRC;IRL;ITA;POL;ROU/indicator/FP.CPI.TOTL.ZG?date=2021%3A2025&format=json&per_page=100",
+      "retrieved_at_utc": "2026-09-25T13:06:06Z",
+      "sha256": "1eb8a64d373dbe032b455a15cfc0a75cdd48bb801859691224180d7d7e3c4eab",
+      "license": "CC BY 4.0",
+      "attribution": "World Bank, World Development Indicators, Inflation, consumer prices (annual %) (FP.CPI.TOTL.ZG); underlying source: International Financial Statistics database, IMF."
+    }
+  }
+}

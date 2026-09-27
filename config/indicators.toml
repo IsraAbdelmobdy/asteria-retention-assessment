@@ -1,0 +1,75 @@
+[analysis]
+start_date = "2021-01-01"
+end_date = "2025-12-31"
+canonical_frequency = "quarterly"
+
+[countries.BG]
+name = "Bulgaria"
+eurostat_code = "BG"
+world_bank_code = "BGR"
+
+[countries.GR]
+name = "Greece"
+eurostat_code = "EL"
+world_bank_code = "GRC"
+
+[countries.IE]
+name = "Ireland"
+eurostat_code = "IE"
+world_bank_code = "IRL"
+
+[countries.IT]
+name = "Italy"
+eurostat_code = "IT"
+world_bank_code = "ITA"
+
+[countries.PL]
+name = "Poland"
+eurostat_code = "PL"
+world_bank_code = "POL"
+
+[countries.RO]
+name = "Romania"
+eurostat_code = "RO"
+world_bank_code = "ROU"
+
+[indicators.unemployment_rate]
+provider = "eurostat"
+dataset = "une_rt_m"
+ingestion_start = "2020-01"
+native_frequency = "monthly"
+comparison_frequency = "quarterly"
+aggregation = "arithmetic_mean_require_all_periods"
+unit = "percent_of_labour_force"
+
+[indicators.unemployment_rate.parameters]
+freq = "M"
+unit = "PC_ACT"
+s_adj = "SA"
+age = "TOTAL"
+sex = "T"
+
+[indicators.job_vacancy_rate]
+provider = "eurostat"
+dataset = "jvs_q_nace2"
+ingestion_start = "2020-Q1"
+native_frequency = "quarterly"
+comparison_frequency = "quarterly"
+aggregation = "none"
+unit = "percent_of_total_posts"
+
+[indicators.job_vacancy_rate.parameters]
+freq = "Q"
+s_adj = "SA"
+nace_r2 = "B-S"
+sizeclas = "TOTAL"
+indic_em = "JVR"
+
+[indicators.consumer_price_inflation]
+provider = "world_bank"
+dataset = "World Development Indicators"
+indicator_code = "FP.CPI.TOTL.ZG"
+native_frequency = "annual"
+comparison_frequency = "annual"
+aggregation = "none"
+unit = "annual_percent_change"

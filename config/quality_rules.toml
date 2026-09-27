@@ -1,0 +1,73 @@
+[quality]
+workforce_as_of_date = "2025-12-31"
+fail_on_conflicting_employee_records = true
+preserve_unknown_classifications = true
+
+[rules.exact_duplicate]
+action = "deduplicate"
+reason_code = "EXACT_DUPLICATE"
+
+[rules.conflicting_employee_records]
+action = "hard_quarantine_and_fail_validation"
+classification = "HARD_QUARANTINE"
+reason_code = "CONFLICTING_EMPLOYEE_RECORDS"
+
+[rules.missing_country]
+action = "exclude_from_country_metrics"
+classification = "METRIC_INELIGIBLE"
+reason_code = "MISSING_COUNTRY"
+
+[rules.unknown_country]
+action = "hard_quarantine"
+classification = "HARD_QUARANTINE"
+reason_code = "UNKNOWN_COUNTRY"
+
+[rules.missing_employee_id]
+action = "hard_quarantine"
+classification = "HARD_QUARANTINE"
+reason_code = "MISSING_EMPLOYEE_ID"
+
+[rules.missing_hire_date]
+action = "exclude_from_time_metrics_and_headcount"
+classification = "METRIC_INELIGIBLE"
+reason_code = "MISSING_HIRE_DATE"
+
+[rules.invalid_hire_date]
+action = "hard_quarantine"
+classification = "HARD_QUARANTINE"
+reason_code = "INVALID_HIRE_DATE"
+
+[rules.invalid_termination_date]
+action = "hard_quarantine"
+classification = "HARD_QUARANTINE"
+reason_code = "INVALID_TERMINATION_DATE"
+
+[rules.invalid_record_updated_at]
+action = "hard_quarantine"
+classification = "HARD_QUARANTINE"
+reason_code = "INVALID_RECORD_UPDATED_AT"
+
+[rules.termination_before_hire]
+action = "hard_quarantine"
+classification = "HARD_QUARANTINE"
+reason_code = "TERMINATION_BEFORE_HIRE"
+
+[rules.missing_termination_type]
+action = "retain_for_retention_but_preserve_unknown_type"
+reason_code = "MISSING_TERMINATION_TYPE"
+
+[rules.unknown_regretted_classification]
+action = "preserve_unknown"
+reason_code = "UNKNOWN_REGRETTED_CLASSIFICATION"
+
+[rules.invalid_regretted_classification]
+action = "hard_quarantine"
+classification = "HARD_QUARANTINE"
+reason_code = "INVALID_REGRETTED_CLASSIFICATION"
+
+[normalisations.country_codes]
+EL = "GR"
+ROM = "RO"
+
+[normalisations.career_levels]
+"Sr Mgmt" = "Senior Leader"

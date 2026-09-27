@@ -1,0 +1,21 @@
+{
+  "analytical_rows": 2381,
+  "exact_duplicate_rows_removed": 7,
+  "excluded_rows": 19,
+  "hard_quarantined_rows": 5,
+  "input_rows": 2407,
+  "issue_counts": {
+    "CAREER_LEVEL_ALIAS": 10,
+    "COUNTRY_ALIAS_EL_GR": 4,
+    "COUNTRY_ALIAS_ROM_RO": 4,
+    "EXACT_DUPLICATE": 7,
+    "MISSING_COUNTRY": 9,
+    "MISSING_HIRE_DATE": 5,
+    "MISSING_TERMINATION_TYPE": 13,
+    "TERMINATION_BEFORE_HIRE": 5,
+    "UNKNOWN_REGRETTED_CLASSIFICATION": 14
+  },
+  "metric_ineligible_rows": 14,
+  "quality_issue_records": 71,
+  "rows_after_deduplication": 2400
+}

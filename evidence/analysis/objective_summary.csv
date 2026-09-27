@@ -1,0 +1,5 @@
+objective_id,objective_name,result_scope,numerator,denominator,calculated_rate,target_value,target_rule,target_status,period,caveat
+NEW_HIRE_6M,New-hire six-month retention,All measurable approved hire cohorts,1576,1808,0.8716814159292036,0.86,AT_LEAST,MET,2021-Q1 to 2025-Q2,"2025 is partial because only cohorts mature by 2025-12-31 are measurable"
+SENIOR_HIRE_12M,Senior-hire twelve-month retention,All measurable approved senior-hire cohorts,209,266,0.7857142857142857,0.9,AT_LEAST,MISSED,2021-Q1 to 2024-Q4,"All country-quarter cohorts are small; no 2025 twelve-month senior cohort is measurable"
+REGRETTED_TURNOVER_12M,Trailing twelve-month regretted turnover,Latest complete trailing window,80,1605.08333333333,0.0498416489278854,0.075,AT_MOST,MET,2025-Q4,"Annual target is met; 2025 increased from 2024 and 12 country-quarter observations exceeded target across the full period"
+
