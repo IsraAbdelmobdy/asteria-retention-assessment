@@ -273,7 +273,6 @@ Run tests:
 - `docs/findings.md`: candidate-approved findings, supporting evidence, and interpretation boundaries
 - `docs/core-workflow.md`: online and offline one-command execution, validation, and failure behaviour
 - `presentation/presentation.md`: 15-minute presentation aligned to the assessment's required agenda
-- `presentation/speaker-notes.md`: timed speaking guide, demo path, fallback, and likely questions
 - `evidence/README.md`: representative curated data, reports, analytical outputs, dashboard screenshots, and source attribution
 - `AI_USAGE.md`: agent work, candidate decisions, corrections, and remaining risks
 

@@ -626,7 +626,6 @@ The candidate approved a simple Markdown presentation and explicitly required it
 
 - Translated the assessment's exact agenda into four timed sections: 3 minutes for problem refinement and scope, 5 minutes for architecture, lineage, and reliability, 4 minutes for the dashboard and key findings, and 3 minutes for tradeoffs, AI usage, and next steps.
 - Created a concise Markdown presentation using only verified project outputs and candidate-approved interpretations.
-- Added a separate plain-English speaking guide with an exact live-demo route, offline preparation commands, a failure fallback, and short answers to likely technical and analytical questions.
 - Included the candidate's 2020 support-history correction and the reviewed-fixture decision as concrete evidence of supervision, challenge, and material change rather than presenting AI use as unattended generation.
 
 ### Ownership boundary
